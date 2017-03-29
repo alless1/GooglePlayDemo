@@ -46,7 +46,7 @@ public abstract class BaseListFragment extends BaseFragment {
     public abstract BaseAdapter onCreateAdapter() ;
 
     @Override
-    protected void startLoadData() {
+    protected void onStartLoadData() {
 
     }
 

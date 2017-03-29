@@ -102,7 +102,7 @@ public class HotFragment extends BaseFragment {
 
 
     @Override
-    protected void startLoadData() {
+    protected void onStartLoadData() {
         Api api = HeiMaRetrofit.getInstance().getApi();
         Call<List<String>> listCall = api.listHot();
         //异步请求,同步请求为execute();

@@ -24,7 +24,7 @@ public class RecommendFragment extends BaseFragment {
     private List<String> mDatas;
 
     @Override
-    protected void startLoadData() {
+    protected void onStartLoadData() {
         Api api = HeiMaRetrofit.getInstance().getApi();
         Call<List<String>> listCall = api.listRecommed();
         listCall.enqueue(new Callback<List<String>>() {

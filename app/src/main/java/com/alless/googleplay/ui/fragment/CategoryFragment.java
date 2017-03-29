@@ -29,7 +29,7 @@ public class CategoryFragment extends BaseListFragment {
     }
 
     @Override
-    protected void startLoadData() {
+    protected void onStartLoadData() {
         Call<List<CategoryItemBean>> listCall = HeiMaRetrofit.getInstance().getApi().listCategory();
         listCall.enqueue(new Callback<List<CategoryItemBean>>() {
             @Override

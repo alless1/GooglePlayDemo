@@ -1,17 +1,12 @@
 package com.alless.googleplay.ui.fragment;
 
 import android.widget.AbsListView;
-import android.widget.BaseAdapter;
 
 /**
  * 首页，应用，游戏，专题都能够滚动到底部加载更多，都显示一个加载进度条。 所以BaseLoadMoreListFragment封装了滚动到列表底部处罚加载更多的逻辑
  */
 
 public abstract class BaseLoadMoreListFragment extends BaseListFragment {
-    @Override
-    public BaseAdapter onCreateAdapter() {
-        return null;
-    }
 
     @Override
     protected void initListView() {

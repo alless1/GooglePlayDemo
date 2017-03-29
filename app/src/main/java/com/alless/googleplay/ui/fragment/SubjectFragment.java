@@ -21,7 +21,7 @@ public class SubjectFragment extends BaseLoadMoreListFragment {
     private List<SubjectItemBean> mDataList;
 
     @Override
-    protected void startLoadData() {
+    protected void onStartLoadData() {
         Call<List<SubjectItemBean>> listCall = HeiMaRetrofit.getInstance().getApi().listSubject(0);
         listCall.enqueue(new Callback<List<SubjectItemBean>>() {
             @Override

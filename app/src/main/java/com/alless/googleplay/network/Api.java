@@ -1,5 +1,6 @@
 package com.alless.googleplay.network;
 
+import com.alless.googleplay.bean.AppListItemBean;
 import com.alless.googleplay.bean.CategoryItemBean;
 import com.alless.googleplay.bean.SubjectItemBean;
 
@@ -28,4 +29,11 @@ public interface Api {
 
     @GET("subject")
     Call<List<SubjectItemBean>> listSubject(@Query("index") int index);
+
+    @GET("game")
+    Call<List<AppListItemBean>> listGame(@Query("index") int index);
+
+    @GET("app")
+    Call<List<AppListItemBean>> listApp(@Query("index") int index);
+
 }

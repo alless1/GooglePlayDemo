@@ -13,7 +13,7 @@ public class GameFragment extends BaseFragment {
     }
 
     @Override
-    protected void startLoadData() {
+    protected void onStartLoadData() {
 
     }
 }

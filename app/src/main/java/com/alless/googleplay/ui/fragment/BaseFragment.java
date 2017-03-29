@@ -45,7 +45,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        startLoadData();
+        onStartLoadData();
     }
 
     /**
@@ -53,7 +53,7 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract View onCreateContentView();
 
-    protected abstract void startLoadData();
+    protected abstract void onStartLoadData();
 
     //数据加载成功,更新界面
     public void onDataLoadSuccess() {
@@ -72,6 +72,6 @@ public abstract class BaseFragment extends Fragment {
     public void onClick() {
         mLoadingError.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.VISIBLE);
-        startLoadData();
+        onStartLoadData();
     }
 }
