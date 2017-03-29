@@ -2,6 +2,7 @@ package com.alless.googleplay.network;
 
 import com.alless.googleplay.bean.AppListItemBean;
 import com.alless.googleplay.bean.CategoryItemBean;
+import com.alless.googleplay.bean.HomeBean;
 import com.alless.googleplay.bean.SubjectItemBean;
 
 import java.util.List;
@@ -35,5 +36,8 @@ public interface Api {
 
     @GET("app")
     Call<List<AppListItemBean>> listApp(@Query("index") int index);
+
+    @GET("home")
+    Call<HomeBean> listHome(@Query("index")int index);
 
 }

@@ -109,7 +109,6 @@ public class HotFragment extends BaseFragment {
         listCall.enqueue(new Callback<List<String>>() {
             @Override
             public void onResponse(Call<List<String>> call, Response<List<String>> response) {
-                Toast.makeText(getContext(), "网络成功", Toast.LENGTH_SHORT).show();
                 mDatas = response.body();
                 onDataLoadSuccess();
 
@@ -117,7 +116,6 @@ public class HotFragment extends BaseFragment {
 
             @Override
             public void onFailure(Call<List<String>> call, Throwable t) {
-                Toast.makeText(getContext(),"网络失败",Toast.LENGTH_SHORT).show();
                 onDataLoadFailed();
             }
         });
