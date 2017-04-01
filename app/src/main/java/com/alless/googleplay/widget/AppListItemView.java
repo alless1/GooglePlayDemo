@@ -22,7 +22,6 @@ import butterknife.ButterKnife;
  */
 public class AppListItemView extends RelativeLayout {
     private static final String TAG = "AppListItemView";
-
     @BindView(R.id.app_icon)
     ImageView mAppIcon;
     @BindView(R.id.app_name)
@@ -36,6 +35,7 @@ public class AppListItemView extends RelativeLayout {
     @BindView(R.id.app_des)
     TextView mAppDes;
 
+
     public AppListItemView(Context context) {
         this(context, null);
     }
@@ -47,7 +47,7 @@ public class AppListItemView extends RelativeLayout {
 
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.list_app_item, this);
-        ButterKnife.bind(this, this);
+        ButterKnife.bind(this);
     }
 
     public void bindView(AppListItemBean bean) {

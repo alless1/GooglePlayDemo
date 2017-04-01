@@ -1,5 +1,6 @@
 package com.alless.googleplay.network;
 
+import com.alless.googleplay.bean.AppDetailBean;
 import com.alless.googleplay.bean.AppListItemBean;
 import com.alless.googleplay.bean.CategoryItemBean;
 import com.alless.googleplay.bean.HomeBean;
@@ -39,5 +40,8 @@ public interface Api {
 
     @GET("home")
     Call<HomeBean> listHome(@Query("index")int index);
+
+    @GET("detail")
+    Call<AppDetailBean> getAppDetail(@Query("packageName") String packageName);
 
 }

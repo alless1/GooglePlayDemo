@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--app信息-->
+            <com.alless.googleplay.widget.AppDetailInfoView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_detail_info">
+
+            </com.alless.googleplay.widget.AppDetailInfoView>
+            <!--安全信息-->
+            <com.alless.googleplay.widget.AppDetailSecurityView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_detail_security"></com.alless.googleplay.widget.AppDetailSecurityView>
+            <!--图片展示-->
+            <com.alless.googleplay.widget.AppDetailGalleryView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_detail_gallery"></com.alless.googleplay.widget.AppDetailGalleryView>
+            <!--应用描述-->
+            <com.alless.googleplay.widget.AppDetailDesView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_detail_des"></com.alless.googleplay.widget.AppDetailDesView>
+        </LinearLayout>
+
+    </ScrollView>
+<!--底部条-->
+    <com.alless.googleplay.widget.AppDetailBottomBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_detail_bottom_bar"></com.alless.googleplay.widget.AppDetailBottomBar>
+
+
+
+</LinearLayout>
