@@ -5,6 +5,7 @@ import android.view.View;
 import com.alless.googleplay.R;
 import com.alless.googleplay.bean.AppDetailBean;
 import com.alless.googleplay.network.HeiMaRetrofit;
+import com.alless.googleplay.widget.AppDetailBottomBar;
 import com.alless.googleplay.widget.AppDetailDesView;
 import com.alless.googleplay.widget.AppDetailGalleryView;
 import com.alless.googleplay.widget.AppDetailInfoView;
@@ -57,7 +58,9 @@ public class AppDetailFragment extends BaseFragment {
         //应用描述
         AppDetailDesView appDetailDesView = (AppDetailDesView) view.findViewById(R.id.app_detail_des);
         appDetailDesView.bindView(mAppDetailBean);
-
+        //底部条
+        AppDetailBottomBar appDetailBottomBar = (AppDetailBottomBar) view.findViewById(R.id.app_detail_bottom_bar);
+        appDetailBottomBar.bindView(mAppDetailBean);
         return view;
 
     }

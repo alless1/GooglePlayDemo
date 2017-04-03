@@ -10,6 +10,15 @@ public class DownloadInfoBean {
     private String packageName;//下载apk的包名
     private int size;//下载apk的大小
     private String filePath;//apk 的文件路径
+    private String downloadUrl;//apk的下载链接
+
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+    }
 
     public int getStatus() {
         return status;

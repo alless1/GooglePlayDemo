@@ -14,9 +14,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.alless.googleplay.R;
 import com.alless.googleplay.adapter.MainAdapter;
+import com.alless.googleplay.manager.DownloadManager;
 
 import butterknife.BindView;
 
@@ -61,6 +63,9 @@ public class MainActivity extends BaseActivity {
         if (result != PackageManager.PERMISSION_GRANTED) {
             //没有写磁盘权限,申请
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
+        }else{
+            //内部有判断.如果存在就不会再创建了
+            DownloadManager.getInstance().createDownloadDir();
         }
     }
 
@@ -129,7 +134,9 @@ public class MainActivity extends BaseActivity {
         switch (requestCode) {
             case 0:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //DownloadManager
+                    DownloadManager.getInstance().createDownloadDir();
+                }else{
+                    Toast.makeText(this,"没有权限,无法下载",Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
